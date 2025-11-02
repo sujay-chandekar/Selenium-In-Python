@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hover.css">
+    <title>Hover Heading</title>
+</head>
+<body>
+    <div id="hoverArea" class="hover-area" tabindex="0" aria-label="Hover area to reveal link">
+        <h1 id="hoverHeading" class="hover-heading"><a href="table.html">View Table</a></h1>
+    </div>
+
+    <main id="practiceArea">
+        <section id="controls">
+            <h2>Selenium practice controls</h2>
+
+            <form id="practiceForm">
+                <label for="nameInput">Name: </label>
+                <input id="nameInput" name="name" type="text" placeholder="Enter name">
+                <button id="submitBtn" type="submit">Submit</button>
+            </form>
+
+            <div id="greeting" role="status" aria-live="polite"></div>
+
+            <div class="field">
+                <label for="colorSelect">Pick a color:</label>
+                <select id="colorSelect">
+                    <option value="">-- Select --</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label><input type="checkbox" id="subscribe"> Subscribe to newsletter</label>
+            </div>
+
+            <fieldset class="field">
+                <legend>Gender</legend>
+                <label><input type="radio" name="gender" id="genderMale" value="male"> Male</label>
+                <label><input type="radio" name="gender" id="genderFemale" value="female"> Female</label>
+            </fieldset>
+
+            <div class="field">
+                <button id="showDelayedBtn">Show delayed content (3s)</button>
+                <div id="delayedContent" hidden data-test="delayed">This content appeared after a short delay.</div>
+            </div>
+
+            <div class="field">
+                <button id="openModalBtn">Open Modal</button>
+            </div>
+
+            <div id="practiceModal" class="modal" role="dialog" aria-hidden="true" hidden>
+                <div class="modal-content">
+                    <button id="closeModalBtn" class="close">×</button>
+                    <h3>Practice Modal</h3>
+                    <p>You can close this modal with the close button.</p>
+                </div>
+            </div>
+
+            <div class="field">
+                <button id="addRowBtn">Add row to local table</button>
+            </div>
+
+            <table id="practiceTable" class="practice-table" aria-describedby="tableDesc">
+                <caption id="tableDesc">Rows added by the "Add row" button</caption>
+                <thead>
+                    <tr><th>#</th><th>Name</th><th>Actions</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
